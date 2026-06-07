@@ -1,0 +1,39 @@
+# file_flag configuration.
+# All sections are optional; anything omitted falls back to built-in defaults.
+
+# Which detectors to run. A file is flagged if any enabled detector finds
+# something. Toggle them on/off purely with `enabled`.
+detectors:
+  tfn:
+    enabled: true
+    require_valid: true      # only flag numbers that pass the ATO checksum
+  pii:
+    enabled: false
+    types: [email, phone_au, credit_card]
+  gri:                       # Government Related Identifiers
+    enabled: false
+    types: [medicare, abn]
+
+# How much of the repository to sample.
+sampling:
+  percent: 10                # sample 10% of files...
+  strategy: proportional     # ...from EACH folder (proportional | equal)
+  seed: 42                   # set for reproducible samples; null for random
+  min_per_folder: 1          # always take at least this many from a non-empty folder
+
+# OCR is only used for pages with no text layer (true scanned images).
+# Requires the `tesseract` binary to be installed.
+ocr:
+  enabled: true
+  dpi: 300
+  language: eng
+
+processing:
+  threads: 8                 # worker threads for concurrent scanning
+
+output:
+  flagged_dir: ./output/flagged
+  copy_mode: copy            # copy | move | none
+  preserve_tree: true        # mirror the source folder structure under flagged_dir
+  report: ./output/report.json
+  mask_values: true          # mask sensitive values in the JSON report
