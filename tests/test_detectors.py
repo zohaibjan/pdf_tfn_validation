@@ -1,6 +1,6 @@
-from pdf_pii_scanner.detectors import build_detectors
-from pdf_pii_scanner.detectors.pii import PIIDetector, _luhn_ok
-from pdf_pii_scanner.detectors.gri import is_valid_abn, is_valid_medicare
+from file_flag.detectors import build_detectors
+from file_flag.detectors.pii import PIIDetector, _luhn_ok
+from file_flag.detectors.gri import is_valid_abn, is_valid_medicare
 
 
 def test_build_detectors_respects_enabled():

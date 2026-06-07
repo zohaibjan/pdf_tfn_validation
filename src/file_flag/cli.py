@@ -1,4 +1,4 @@
-"""Command line entry point for the PDF PII scanner."""
+"""Command line entry point for file_flag."""
 from __future__ import annotations
 
 import argparse
@@ -15,7 +15,7 @@ from . import reporting
 
 def build_parser() -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(
-        prog="pdf-pii-scanner",
+        prog="file_flag",
         description="Sample a document repository and flag PDFs containing "
                     "valid TFNs / PII / government identifiers.",
     )

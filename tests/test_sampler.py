@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from pdf_pii_scanner import sampler
+from file_flag import sampler
 
 
 def _make_repo(tmp_path: Path) -> Path:

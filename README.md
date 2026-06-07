@@ -1,4 +1,4 @@
-# PDF PII Scanner
+# file_flag
 
 Sample a large document repository, scan the sampled PDFs for **valid Australian
 Tax File Numbers (TFNs)** — and optionally other PII / government identifiers —
@@ -63,13 +63,13 @@ else still works.
 python tools/generate_sample_pdfs.py ./sample_repo --folders 5 --per-folder 8
 
 # 2. scan 10% of it (per the YAML), copying flagged files to ./output/flagged
-python -m pdf_pii_scanner ./sample_repo -c config/scan_config.yaml
+python -m file_flag ./sample_repo -c config/scan_config.yaml
 
 # preview what WOULD be sampled, without scanning
-python -m pdf_pii_scanner ./sample_repo -c config/scan_config.yaml --dry-run
+python -m file_flag ./sample_repo -c config/scan_config.yaml --dry-run
 ```
 
-Run from the repo root, or `pip install -e .` to get the `pdf-pii-scanner`
+Run from the repo root, or `pip install -e .` to get the `file_flag`
 command on your PATH.
 
 ### Useful CLI flags
@@ -170,8 +170,8 @@ Values are masked by default; use `--no-mask` only in a secure environment.
 ## Project layout
 
 ```
-src/pdf_pii_scanner/
-  cli.py            # argparse entry point  (python -m pdf_pii_scanner)
+src/file_flag/
+  cli.py            # argparse entry point  (python -m file_flag)
   config.py         # YAML load + defaults + validation
   sampler.py        # stratified per-folder sampling
   extraction.py     # text extraction, OCR fallback, redaction detection

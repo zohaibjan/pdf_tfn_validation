@@ -1,4 +1,4 @@
-# PDF PII scanner configuration.
+# file_flag configuration.
 # All sections are optional; anything omitted falls back to built-in defaults.
 
 # Which detectors to run. A file is flagged if any enabled detector finds

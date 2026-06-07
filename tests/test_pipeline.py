@@ -1,9 +1,9 @@
 from pathlib import Path
 
-from pdf_pii_scanner import scanner
-from pdf_pii_scanner.config import Config
-from pdf_pii_scanner.detectors import build_detectors
-from pdf_pii_scanner import pipeline
+from file_flag import scanner
+from file_flag.config import Config
+from file_flag.detectors import build_detectors
+from file_flag import pipeline
 from tools import generate_sample_pdfs as gen
 
 

@@ -1,4 +1,4 @@
-"""PDF PII scanner: stratified sampling + multi-threaded TFN/PII/GRI detection."""
+"""file_flag: stratified sampling + multi-threaded TFN/PII/GRI detection in PDFs."""
 from __future__ import annotations
 
 __version__ = "0.1.0"

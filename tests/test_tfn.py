@@ -1,6 +1,6 @@
 import random
 
-from pdf_pii_scanner.detectors.tfn import TFNDetector, is_valid_tfn
+from file_flag.detectors.tfn import TFNDetector, is_valid_tfn
 
 # TFNs that are known to pass the modulus-11 checksum.
 KNOWN_VALID = ["123456782", "123 456 782", "459599230"]
