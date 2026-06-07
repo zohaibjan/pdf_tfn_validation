@@ -54,6 +54,13 @@ brew install tesseract
 If Tesseract is absent, scanned pages are skipped with a warning; everything
 else still works.
 
+### Offline / air-gapped install
+
+A pre-downloaded wheel bundle for **Windows 64-bit + Python 3.11** lives in
+[`offline/`](offline/). Copy that folder to the target machine and run
+`install.bat` — no internet required. See [`offline/README.md`](offline/README.md)
+for details (and how to rebuild for another OS/Python version).
+
 ---
 
 ## Quick start
